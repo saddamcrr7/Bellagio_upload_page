@@ -1,0 +1,359 @@
+header {
+  z-index: 10;
+
+  .header_top {
+    background: $primary-color;
+    padding: 10px 0px;
+
+    @include breakpoint($small) {
+      padding: 15px 5px;
+
+    }
+
+    ul li {
+      color: $white-color;
+      font-weight: 600;
+      line-height: 12px;
+      font-size: 10px;
+
+      @include breakpoint ($small) {
+        font-size: 12px;
+      }
+
+      a {
+        color: $white-color;
+        transition: opacity 0.3s;
+        padding: 5px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .top_left li:first-child {
+      border-right: 1.2px solid $white-color;
+    }
+
+    .top_Right li:nth-child(1),
+    .top_Right li:nth-child(2),
+    .top_Right li:nth-child(3) {
+      border-right: 1.2px solid $white-color;
+    }
+  }
+
+  .header_bottom {
+    background: $primary-color;
+    padding: 10px;
+    color: $white-color;
+
+    p {
+      width: 100%;
+      letter-spacing: unset;
+
+      font-size: 10px;
+
+      @include breakpoint ($small) {
+        font-size: 14px;
+        letter-spacing: 1px;
+
+      }
+    }
+
+    form {
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 2px 20px 2px 10px;
+        border: none;
+      }
+
+      button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+        outline: none;
+        color: $dark-grey-color;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    @include breakpoint($large) {
+      p {
+        width: 70%;
+      }
+
+      form {
+        width: 30%;
+      }
+    }
+
+  }
+
+  nav {
+    padding: 10px 0;
+
+    ul {
+      li {
+        a {
+          color: #163868;
+          font-size: 12px;
+          transition: all 0.3s;
+
+          @include breakpoint($small) {
+            font-size: 12px;
+          }
+
+          @include breakpoint($medium) {
+            font-size: 14px;
+          }
+
+          @include breakpoint($large) {
+            font-size: 15px;
+          }
+
+          @include breakpoint($x-large) {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}
+#m_content{
+  .title{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    background: $primary-color;
+    color: $white-color;
+    font-weight: 400;
+    letter-spacing: 1.75px;
+    @include breakpoint($medium){
+      font-size: 32px;
+      line-height: 60px;
+    }
+  }
+  .left_side{
+    padding: 30px;
+    border: 1px solid $dark-grey-color;
+    overflow: hidden;
+    .from_title{
+      h2{
+        text-align: center;
+        font-size: 20px;
+        @include breakpoint($small){
+          font-size: 30px;
+          text-align: left;
+        }
+      }
+    }
+    label{
+      font-size: 15px;
+    }
+    input{
+      width: 100%;
+      height: 28px;
+      border: none;
+      outline: none;
+      background: $dark-grey-color;
+      padding: 0 5px;
+    }
+    .submit_btn{
+      width: 100%;
+      height: 35px;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: $white-color;
+      letter-spacing: 1.75px;
+      background: $primary-color;
+
+    }
+    .file_up{
+      width: 45%;
+      height: 35px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid $dark-grey-color;
+      cursor: pointer;
+      color: #000;
+      text-align: center;
+      border-radius: 5px;
+      span{
+        line-height: 35px;
+        z-index: 1;
+      }
+      input, span{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+
+      }
+      input{
+        opacity: 0;
+        z-index: 4;
+      }
+    }
+  }
+  .right_side{
+    border: 1px solid $dark-grey-color;
+    overflow: hidden;
+    img{
+    width: 100%;
+    }
+  }
+  .step{
+    border: 1px solid $dark-grey-color;
+    overflow: hidden;
+    padding: 25px 0;
+    h3{
+      font-size: 20px;
+    }
+  }
+}
+
+
+.footer_wrapper {
+  padding: 15px;
+  border: 1px solid $dark-grey-color;
+
+  @include breakpoint($small) {
+    padding: 20px;
+  }
+
+  @include breakpoint($medium) {
+    padding: 30px;
+  }
+
+  @include breakpoint($large) {
+    padding: 35px;
+  }
+
+  @include breakpoint($x-large) {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 300;
+    color: $primary-color;
+    margin-bottom: 10px;
+
+    @include breakpoint($small) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    @include breakpoint($medium) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint($large) {
+      font-size: 20px;
+      margin-bottom: 22px;
+    }
+
+    @include breakpoint($x-large) {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+  }
+
+  a {
+    color: #a5afb3;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 300;
+    transition: all 0.3s;
+    &:hover{
+      color: #353535
+    }
+    @include breakpoint($small) {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    @include breakpoint($medium) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include breakpoint($large) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    @include breakpoint($x-large) {
+      font-size: 19px;
+      line-height: 30px;
+    }
+  }
+
+  p {
+    @extend a;
+  }
+
+  .right_content {
+    position: relative;
+    .follow_link{
+      a.fb{
+      position: relative;
+        &::before{
+          content: '';
+          height: 100%;
+          width: 1px;
+          background: $dark-grey-color;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    form {
+      input {
+        border: 1px solid $dark-grey-color;
+        padding-left: 10px;
+        width: 55%;
+        @extend a;
+      }
+
+      button {
+        @extend a;
+        background-color: #a5afb3;
+        outline: none;
+        border: none;
+        color: $white-color;
+        width: 40%;
+        cursor: pointer;
+        font-weight: normal;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: $dark-grey-color;
+      position: absolute;
+      left: -22%;
+      transform: translateX(22%);
+      top: 0;
+    }
+  }
+}
